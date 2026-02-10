@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess AI Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>♟️ Chess AI Arena</h1>
+        <p>Chơi cờ vua với bot ngẫu nhiên (luật hợp lệ đầy đủ).</p>
+        <div class="status-wrap">
+          <p id="status">Đang tải...</p>
+          <button id="new-game">Ván mới</button>
+        </div>
+        <ol class="guide">
+          <li>Bạn đi quân trắng trước.</li>
+          <li>Bấm 1 quân để chọn, bấm ô đích để đi.</li>
+          <li>Bot sẽ tự phản hồi ngay sau lượt của bạn.</li>
+        </ol>
+      </section>
+      <section class="board-section">
+        <div id="board" class="board" aria-label="Bàn cờ vua"></div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
