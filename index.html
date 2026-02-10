@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess AI Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>♟️ Chess AI Arena</h1>
+        <p>Đấu với bot có chiến thuật (minimax) và 3 mức độ khó.</p>
+
+        <div class="controls">
+          <label>
+            Độ khó bot:
+            <select id="difficulty">
+              <option value="1">Dễ (sâu 1)</option>
+              <option value="2" selected>Vừa (sâu 2)</option>
+              <option value="3">Khó (sâu 3)</option>
+            </select>
+          </label>
+          <button id="new-game">Ván mới</button>
+        </div>
+
+        <p id="status" class="status">Đang tải...</p>
+
+        <div class="meta">
+          <div>
+            <h2>Lịch sử nước đi</h2>
+            <ol id="move-list" class="move-list"></ol>
+          </div>
+          <div>
+            <h2>Trạng thái ván</h2>
+            <ul class="guide">
+              <li>Bạn chơi quân trắng.</li>
+              <li>Click quân trắng để chọn, click ô đích để đi.</li>
+              <li>Tốt phong cấp tự động thành Hậu.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="board-section">
+        <div id="board" class="board" aria-label="Bàn cờ vua"></div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.13.4/chess.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
